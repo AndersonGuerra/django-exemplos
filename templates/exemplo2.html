@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar is-primary" role="navigation">
+      <div class="navbar-menu">
+        <span class="navbar-item"> Minha Super Barra Bulma </span>
+      </div>
+    </nav>
+    <section class="section">
+      <h1 class="title">Cuidado</h1>
+      <h2 class="subtitle">Abaixo existe algo estranho...</h2>
+      <button id="btn-abrir" onclick="modalHandler()" class="button is-primary">
+        Abrir
+      </button>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-background"></div>
+
+      <div class="modal-content">
+        <div class="box">
+          <p>Um conteúdo muito peculiar :D</p>
+        </div>
+        <button
+          onclick="modalHandler()"
+          class="button is-danger"
+          aria-label="close"
+        >
+          Fechar
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function modalHandler() {
+        var modal = document.getElementById("modal");
+        modal.classList = modal.classList.contains("is-active")
+          ? "modal"
+          : "modal is-active";
+      }
+    </script>
+  </body>
+</html>
